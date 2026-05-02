@@ -6,17 +6,19 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        # This forces the workstation to look in the right place
+        with:
+          path: '.' 
+
       - name: setup-java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+
       - name: make gradlew executable
         run: chmod +x gradlew
+
       - name: build
+        # We tell it exactly where the wrapper is
         run: ./gradlew build
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: BedrockCrits-Jar
-          path: build/libs/*.jar
