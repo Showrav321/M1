@@ -8,8 +8,8 @@ jobs:
         uses: actions/checkout@v4
         # This forces the workstation to look in the right place
         with:
-          path: '.' 
-
+          path: '.'
+#
       - name: setup-java
         uses: actions/setup-java@v4
         with:
