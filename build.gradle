@@ -1,4 +1,6 @@
-
+plugins {
+    id 'fabric-loom' version '1.7-SNAPSHOT' 
+}
 repositories {
     maven {
         url = "https://maven.fabricmc.net/"
