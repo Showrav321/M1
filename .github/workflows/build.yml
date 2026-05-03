@@ -19,5 +19,6 @@ jobs:
       - name: Execute Gradle Build
         run: |
           chmod +x gradlew
+          gradle wrapper --gradle-version 8.1.0
           ./gradlew build
 ## it 
